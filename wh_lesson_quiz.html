@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>شرح قواعد WH (what - when - on - in - how old) + اختبار صوتي</title>
+  <style>
+    :root{--bg:#f7fafc;--card:#fff;--accent:#0b76ef;--muted:#6b7280}
+    body{font-family: "Noto Sans Arabic", system-ui, Arial; background:var(--bg); margin:0; color:#111}
+    .container{max-width:980px;margin:24px auto;padding:18px}
+    header{display:flex;align-items:center;gap:12px}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:16px}
+    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(14,30,60,0.06)}
+    .rule{line-height:1.6}
+    ul.examples{padding-left:18px}
+    .example{margin:6px 0}
+    button, .btn{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+    .btn.secondary{background:#eee;color:#111}
+    .small{font-size:13px;padding:6px 8px}
+    .practice .row{display:flex;gap:8px;align-items:center;margin:10px 0}
+    input[type=text]{padding:8px;border-radius:6px;border:1px solid #ddd;flex:1}
+    .feedback{font-weight:700}
+    .correct{color:green}
+    .wrong{color:#c0392b}
+    .quiz-list{list-style:none;padding:0;margin:0}
+    .quiz-item{padding:10px;border-radius:8px;border:1px solid #eef;margin:10px 0}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr;}
+      .card{padding:12px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>شرح أسئلة WH وقواعد استخدام <code>what - when - in - on - how old</code></h1>
+    </header>
+    <p class="lead">صفحة تعليمية تشرح القاعدة مع أمثلة واختبار تفاعلي مع نطق صوتي (SpeechSynthesis).</p>
+
+    <div class="grid">
+      <!-- LEFT: lesson + practice -->
+      <div>
+        <section class="card rule">
+          <h2>القاعدة (بالعربية)</h2>
+          <p>هنا نركز على: <strong>What</strong> للسؤال عن الأشياء/الأسماء، <strong>When</strong> للسؤال عن الوقت/الشهر/التاريخ، <strong>In</strong> مع الشهور/السنوات/الفصول، <strong>On</strong> مع الأيام والتواريخ، و<strong>How old</strong> للسؤال عن العمر.</p>
+
+          <h3>قواعد سريعة</h3>
+          <ul>
+            <li><code>What</code> = ماذا/ما (What is your name? What is that?)</li>
+            <li><code>When</code> = متى (When is your vacation?) → نجيب: in July / on July 17th / at 3 pm</li>
+            <li><code>In</code> يستخدم مع: <em>months, years, seasons</em>. مثال: <code>in July</code>, <code>in 2024</code>, <code>in winter</code>.</li>
+            <li><code>On</code> يستخدم مع: <em>days and dates</em>. مثال: <code>on Monday</code>, <code>on May 4th</code>.</li>
+            <li><code>How old</code> = كم عمرك؟ الجواب بصيغة <code>I'm + number + years old</code>.</li>
+          </ul>
+
+          <h3>أمثلة مع شرح</h3>
+          <ul class="examples">
+            <li class="example">1. <strong>When</strong> is your vacation? — <em>It's in July.</em></li>
+            <li class="example">2. The party is <strong>on</strong> Friday. (يوم من أيام الأسبوع)</li>
+            <li class="example">3. <strong>How old</strong> are you? — <em>I'm fifteen.</em></li>
+            <li class="example">4. Our final test is <strong>in</strong> September. (شهر)</li>
+            <li class="example">5. <strong>What</strong> is the date today? — <em>It's May 4th.</em></li>
+            <li class="example">6. What is the day after Monday? — <em>Tuesday</em>.</li>
+            <li class="example">7. Which number is "eightieth"? — <em>80th</em>.</li>
+            <li class="example">8. If something is "enormous" it is: a) very small b) very big c) very old → correct: b)</li>
+          </ul>
+
+          <h3>نطق الجمل</h3>
+          <p>اضغط على زر 🔊 بجانب أي جملة لسماع النطق بالإنجليزية.</p>
+        </section>
+
+        <section class="card practice" style="margin-top:14px">
+          <h2>تدريبات سريعة (املأ الفراغ)</h2>
+          <div class="row">
+            <div>1.</div>
+            <div style="flex:1">_____ is your vacation? It's in July.</div>
+            <input id="p1" type="text" placeholder="اكتب كلمة" />
+            <button class="small" onclick="checkPractice('p1','in')">تحقق</button>
+            <div id="f1" class="feedback"></div>
+          </div>
+
+          <div class="row">
+            <div>2.</div>
+            <div style="flex:1">The party is _____ Friday.</div>
+            <input id="p2" type="text" />
+            <button class="small" onclick="checkPractice('p2','on')">تحقق</button>
+            <div id="f2" class="feedback"></div>
+          </div>
+
+          <div class="row">
+            <div>3.</div>
+            <div style="flex:1">_____ are you? I'm fifteen.</div>
+            <input id="p3" type="text" />
+            <button class="small" onclick="checkPractice('p3','how old')">تحقق</button>
+            <div id="f3" class="feedback"></div>
+          </div>
+
+          <div class="row">
+            <div>4.</div>
+            <div style="flex:1">Our final test _____ September.</div>
+            <input id="p4" type="text" />
+            <button class="small" onclick="checkPractice('p4','in')">تحقق</button>
+            <div id="f4" class="feedback"></div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button onclick="readAllExamples()">🔊 اقرأ الأمثلة</button>
+            <button class="btn secondary" onclick="clearPractice()">إعادة ضبط</button>
+          </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="card" style="margin-top:14px">
+          <h2>اختبار نهائي — 10 أسئلة (اختيار من متعدد)</h2>
+          <p>اضغط 🔊 لسماع السؤال. عند الانتهاء اضغط "احسب نتيجتي".</p>
+
+          <ol id="quiz" class="quiz-list">
+            <!-- quiz items generated by JS -->
+          </ol>
+
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button id="scoreBtn" class="btn" onclick="scoreQuiz()">احسب نتيجتي</button>
+            <button class="btn secondary" onclick="restartQuiz()">إعادة الاختبار</button>
+            <div id="score" style="align-self:center;font-weight:700"></div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT: quick reference + audio controls -->
+      <aside>
+        <div class="card">
+          <h3>ملخص سريع</h3>
+          <ul>
+            <li><strong>In</strong> = months / years / seasons → in July, in 2024</li>
+            <li><strong>On</strong> = days / dates → on Monday, on May 4th</li>
+            <li><strong>When</strong> = عن الزمن → When is your vacation?</li>
+            <li><strong>What</strong> = عن الأشياء → What is that?</li>
+            <li><strong>How old</strong> = عن العمر → How old are you?</li>
+          </ul>
+
+          <hr />
+          <h4>أدوات صوتية</h4>
+          <p>يمكنك التحكم بصوت القراءة واختيار سرعة النطق:</p>
+          <label>سرعة: <input id="rate" type="range" min="0.5" max="2" step="0.1" value="1"/></label>
+          <br />
+          <label>اللغة: <select id="voiceSelect"></select></label>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4>أمثلة إضافية قصيرة (اضغط 🔊 للاستماع)</h4>
+          <ol>
+            <li>When do you go to school? <button class="small" onclick="speak('When do you go to school?')">🔊</button></li>
+            <li>What is your name? <button class="small" onclick="speak('What is your name?')">🔊</button></li>
+            <li>I'm 12 years old. <button class="small" onclick="speak("I'm 12 years old.")">🔊</button></li>
+            <li>The meeting is on Tuesday. <button class="small" onclick="speak('The meeting is on Tuesday.')">🔊</button></li>
+            <li>We will travel in September. <button class="small" onclick="speak('We will travel in September.')">🔊</button></li>
+          </ol>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <p>انتهى الدرس. يمكنك حفظ الصفحة كملف HTML وفتحها في متصفح. تستخدم هذه الصفحة واجهة التحدث (SpeechSynthesis) المدمجة في المتصفح للنطق الصوتي.</p>
+    </footer>
+  </div>
+
+  <script>
+    // PRACTICE CHECK
+    function checkPractice(id, correct){
+      const val = document.getElementById(id).value.trim().toLowerCase();
+      const fb = document.getElementById('f'+id.slice(1));
+      if(!val){ fb.textContent = 'اكتب إجابتك أولاً'; fb.className='feedback wrong'; return}
+      if(val===correct || (correct==='how old' && val.replace(/\s+/g,'')==='howold')){
+        fb.textContent='صحيح ✓'; fb.className='feedback correct';
+      } else { fb.textContent='خطأ ✗ — الإجابة الصحيحة: '+correct; fb.className='feedback wrong'}
+    }
+    function clearPractice(){ ['p1','p2','p3','p4'].forEach(i=>{document.getElementById(i).value=''; const el=document.getElementById('f'+i.slice(1)); if(el)el.textContent='';}) }
+
+    // Speech utils
+    const synth = window.speechSynthesis;
+    const rateInput = document.getElementById('rate');
+    const voiceSelect = document.getElementById('voiceSelect');
+    let voices = [];
+    function populateVoices(){
+      voices = synth.getVoices().filter(v=>/en|english/i.test(v.lang) || /ar|arabic/i.test(v.lang));
+      voiceSelect.innerHTML='';
+      voices.forEach((v,i)=>{
+        const opt = document.createElement('option'); opt.value=i; opt.textContent = v.name + ' ('+v.lang+')'; voiceSelect.appendChild(opt);
+      });
+    }
+    populateVoices();
+    if(typeof speechSynthesis!=='undefined')speechSynthesis.onvoiceschanged = populateVoices;
+
+    function speak(text){
+      if(!text) return;
+      const ut = new SpeechSynthesisUtterance(text);
+      ut.rate = parseFloat(rateInput.value);
+      const idx = parseInt(voiceSelect.value || 0);
+      if(voices[idx]) ut.voice = voices[idx];
+      synth.cancel();
+      synth.speak(ut);
+    }
+
+    function readAllExamples(){
+      const all = [
+        'When is your vacation? It\'s in July.',
+        'The party is on Friday.',
+        'How old are you? I\'m fifteen.',
+        'Our final test is in September.',
+        'What is the date today? It\'s May fourth.'
+      ];
+      speak(all.join(' ... '));
+    }
+
+    // QUIZ DATA
+    const quizData = [
+      {q:'When is your vacation? It is _____ July.', opts:['in','on','at'], a:0},
+      {q:'The meeting is _____ Monday.', opts:['in','on','at'], a:1},
+      {q:'What is the date today? — It\'s May 4th. Which question word used?', opts:['When','What','How old'], a:1},
+      {q:'Which is correct: I am _____ years old.', opts:['twenty','twenty years old','years old'], a:1},
+      {q:'Our final test is _____ September.', opts:['in','on','at'], a:0},
+      {q:'Which preposition for months?', opts:['on','in','by'], a:1},
+      {q:'The party is on Friday. What is the day after Friday?', opts:['Saturday','Thursday','Sunday'], a:0},
+      {q:'Which number is "eightieth"?', opts:['88th','80th','18th'], a:1},
+      {q:'If something is "enormous" it is', opts:['very small','very big','very old'], a:1},
+      {q:'What do we ask to know age?', opts:['When','How old','What'], a:1}
+    ];
+
+    function buildQuiz(){
+      const qEl = document.getElementById('quiz'); qEl.innerHTML='';
+      quizData.forEach((item,i)=>{
+        const li = document.createElement('li'); li.className='quiz-item';
+        li.innerHTML = `<div style=\"display:flex;justify-content:space-between;align-items:center\"><div><strong>سؤال ${i+1}:</strong> ${escapeHtml(item.q)}</div><div><button class=\"small\" onclick=\"speak(\'${escapeQuotes(item.q)}\')\">🔊</button></div></div>`;
+        const form = document.createElement('div');
+        item.opts.forEach((opt,j)=>{
+          const id = 'q'+i+'o'+j;
+          const radio = document.createElement('label'); radio.style.display='block'; radio.style.marginTop='8px';
+          radio.innerHTML = `<input type='radio' name='q${i}' value='${j}'/> ${opt}`;
+          form.appendChild(radio);
+        });
+        li.appendChild(form);
+        qEl.appendChild(li);
+      });
+    }
+    function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function escapeQuotes(s){ return s.replace(/'/g,"\\'"); }
+
+    function scoreQuiz(){
+      let correct=0;
+      quizData.forEach((item,i)=>{
+        const sel = document.querySelector('input[name=q'+i+']:checked');
+        const parent = document.querySelectorAll('.quiz-item')[i];
+        parent.style.borderColor='';
+        if(sel && parseInt(sel.value)===item.a){ correct++; parent.style.borderColor='green'; }
+        else { parent.style.borderColor='#c0392b'; }
+      });
+      const score = Math.round( (correct/quizData.length)*100 );
+      document.getElementById('score').textContent = `نتيجتك: ${correct}/${quizData.length} — ${score}%`;
+      // speak result
+      speak('Your score is '+correct+' out of '+quizData.length);
+    }
+
+    function restartQuiz(){
+      if(confirm('هل تريد إعادة الاختبار؟')){
+        buildQuiz(); document.getElementById('score').textContent='';
+      }
+    }
+
+    // initialize
+    buildQuiz();
+
+  </script>
+</body>
+</html>
