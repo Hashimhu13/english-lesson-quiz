@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>الاختصارات في الإنجليزية | منصة تعلم الإنجليزية</title>
+  <style>
+    :root{
+      --bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --card: #ffffff;
+      --accent: #4f46e5;
+      --accent-hover: #3730a3;
+      --success: #10b981;
+      --success-light: #d1fae5;
+      --error: #ef4444;
+      --error-light: #fee2e2;
+      --muted: #6b7280;
+      --text: #1f2937;
+      --border: #e5e7eb;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+    }
+
+    body{
+      font-family: "Noto Sans Arabic", "Segoe UI", system-ui, -apple-system, sans-serif; 
+      background: var(--bg);
+      margin: 0; 
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container{
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header{
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    h1{
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .lead{
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .card{
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      margin-bottom: 1.5rem;
+    }
+
+    .card:hover{
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    nav{
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    nav a{
+      display: inline-block;
+      background: #4f46e5;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover{
+      background: #3730a3;
+      transform: translateY(-2px);
+    }
+
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: #f8fafc;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    th{
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    td{
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #e5e7eb;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) td{
+      background: #f1f5f9;
+    }
+
+    tr:last-child td{
+      border-bottom: none;
+    }
+
+    .contraction-example{
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 1rem 0;
+      border-left: 4px solid #0ea5e9;
+    }
+
+    .practice-row{
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .practice-row:hover{
+      background: #f1f5f9;
+      transform: scale(1.02);
+    }
+
+    input[type=text]{
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: 2px solid var(--border);
+      flex: 1;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    input[type=text]:focus{
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+
+    .feedback{
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .correct{
+      color: var(--success);
+      background: var(--success-light);
+    }
+
+    .wrong{
+      color: var(--error);
+      background: var(--error-light);
+    }
+
+    .btn{
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);
+    }
+
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(79, 70, 229, 0.35);
+    }
+
+    .btn.secondary{
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      color: var(--text);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .quiz-item{
+      padding: 1.5rem;
+      border-radius: 15px;
+      border: 2px solid var(--border);
+      margin: 1.5rem 0;
+      background: #fafafa;
+      transition: all 0.3s ease;
+    }
+
+    .quiz-item:hover{
+      border-color: var(--accent);
+      transform: scale(1.01);
+    }
+
+    @media(max-width:768px){
+      .container{
+        padding: 1rem;
+      }
+      
+      h1{
+        font-size: 2rem;
+      }
+      
+      .card{
+        padding: 1.5rem;
+      }
+      
+      .practice-row{
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch;
+      }
+      
+      nav a{
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      animation: fadeInUp 0.6s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">🏠 الرئيسية</a>
+      <a href="wh_lesson_quiz.html">❓ WH Questions</a>
+      <a href="subject_verb_lesson.html">👤 الفاعل وفعل الكون</a>
+    </nav>
+
+    <header>
+      <h1>✂️ الاختصارات في الإنجليزية</h1>
+      <p class="lead">تعلم استخدام الاختصارات مثل he's, she's, we're, you're مع أمثلة تفاعلية ونطق صوتي</p>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="card">
+      <h2 style="color: var(--accent); margin-bottom: 1.5rem;">📚 مقدمة عن الاختصارات</h2>
+      <p style="font-size: 1.1rem; background: #e0f2fe; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #0288d1;">
+        <strong>📌 ما هي الاختصارات؟</strong><br>
+        الاختصارات في الإنجليزية هي طريقة لدمج كلمتين في كلمة واحدة باستخدام علامة الفاصلة العليا (apostrophe) '
+      </p>
+
+      <div class="contraction-example">
+        <h3 style="color: #0369a1; margin-top: 0;">🔄 أمثلة على التحويل:</h3>
+        <ul style="font-size: 1.1rem; line-height: 2;">
+          <li><strong>He is</strong> → <strong>He's</strong> (هو)</li>
+          <li><strong>She is</strong> → <strong>She's</strong> (هي)</li>
+          <li><strong>We are</strong> → <strong>We're</strong> (نحن)</li>
+          <li><strong>You are</strong> → <strong>You're</strong> (أنت/أنتم)</li>
+          <li><strong>They are</strong> → <strong>They're</strong> (هم/هن)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contractions Table -->
+    <section class="card">
+      <h2 style="color: var(--accent); margin-bottom: 1.5rem;">📋 جدول الاختصارات الشامل</h2>
+      
+      <table>
+        <tr>
+          <th>Subject<br>الفاعل</th>
+          <th>Verb "Be" Form<br>شكل فعل الكون</th>
+          <th>Contraction<br>الاختصار</th>
+          <th>Example<br>مثال</th>
+        </tr>
+        <tr>
+          <td>I</td>
+          <td>am</td>
+          <td>I'm</td>
+          <td>I'm happy</td>
+        </tr>
+        <tr>
+          <td>You</td>
+          <td>are</td>
+          <td>You're</td>
+          <td>You're a student</td>
+        </tr>
+        <tr>
+          <td>He</td>
+          <td>is</td>
+          <td>He's</td>
+          <td>He's a good boy</td>
+        </tr>
+        <tr>
+          <td>She</td>
+          <td>is</td>
+          <td>She's</td>
+          <td>She's beautiful</td>
+        </tr>
+        <tr>
+          <td>It</td>
+          <td>is</td>
+          <td>It's</td>
+          <td>It's a cat</td>
+        </tr>
+        <tr>
+          <td>We</td>
+          <td>are</td>
+          <td>We're</td>
+          <td>We're happy</td>
+        </tr>
+        <tr>
+          <td>They</td>
+          <td>are</td>
+          <td>They're</td>
+          <td>They're students</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="card">
+      <h2 style="color: var(--accent); margin-bottom: 1.5rem;">🎯 أمثلة من المنهج</h2>
+      
+      <div style="display: grid; gap: 1rem;">
+        <div class="contraction-example" onclick="speak('He is a good boy. He\'s a good boy.')">
+          <div style="display: flex; justify-content: between; align-items: center;">
+            <div style="flex: 1;">
+              <strong>الجملة الكاملة:</strong> He is a good boy<br>
+              <strong>الاختصار:</strong> He's a good boy<br>
+              <small style="color: #6b7280;">هو ولد جيد</small>
+            </div>
+            <button class="btn" style="margin-left: 1rem; padding: 0.5rem 1rem;">🔊</button>
+          </div>
+        </div>
+
+        <div class="contraction-example" onclick="speak('We are happy. We\'re happy.')">
+          <div style="display: flex; justify-content: between; align-items: center;">
+            <div style="flex: 1;">
+              <strong>الجملة الكاملة:</strong> We are happy<br>
+              <strong>الاختصار:</strong> We're happy<br>
+              <small style="color: #6b7280;">نحن سعداء</small>
+            </div>
+            <button class="btn" style="margin-left: 1rem; padding: 0.5rem 1rem;">🔊</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section class="card">
+      <h2 style="color: var(--accent); margin-bottom: 1.5rem;">🏋️‍♀️ تدريبات تفاعلية</h2>
+      <p style="background: #f0f9ff; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
+        <strong>📝 التعليمات:</strong> حول الجمل التالية إلى اختصارات
+      </p>
+
+      <div class="practice-row">
+        <div style="background: #4f46e5; color: white; padding: 0.5rem; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
+        <div style="flex:1; font-size: 1.1rem;">
+          <strong>He is a teacher</strong> → He___ a teacher<br>
+          <small style="color: #6b7280;">هو مدرس</small>
+        </div>
+        <input id="p1" type="text" placeholder="اكتب الاختصار" />
+        <button class="btn" onclick="checkPractice('p1','he\\'s')">✓ تحقق</button>
+        <button class="btn secondary" onclick="speak('He is a teacher. He\'s a teacher.')">🔊</button>
+        <div id="f1" class="feedback"></div>
+      </div>
+
+      <div class="practice-row">
+        <div style="background: #4f46e5; color: white; padding: 0.5rem; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</div>
+        <div style="flex:1; font-size: 1.1rem;">
+          <strong>We are students</strong> → We___ students<br>
+          <small style="color: #6b7280;">نحن طلاب</small>
+        </div>
+        <input id="p2" type="text" placeholder="اكتب الاختصار" />
+        <button class="btn" onclick="checkPractice('p2','we\\'re')">✓ تحقق</button>
+        <button class="btn secondary" onclick="speak('We are students. We\'re students.')">🔊</button>
+        <div id="f2" class="feedback"></div>
+      </div>
+
+      <div class="practice-row">
+        <div style="background: #4f46e5; color: white; padding: 0.5rem; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</div>
+        <div style="flex:1; font-size: 1.1rem;">
+          <strong>You are happy</strong> → You___ happy<br>
+          <small style="color: #6b7280;">أنت سعيد</small>
+        </div>
+        <input id="p3" type="text" placeholder="اكتب الاختصار" />
+        <button class="btn" onclick="checkPractice('p3','you\\'re')">✓ تحقق</button>
+        <button class="btn secondary" onclick="speak('You are happy. You\'re happy.')">🔊</button>
+        <div id="f3" class="feedback"></div>
+      </div>
+
+      <div class="practice-row">
+        <div style="background: #4f46e5; color: white; padding: 0.5rem; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">4</div>
+        <div style="flex:1; font-size: 1.1rem;">
+          <strong>She is beautiful</strong> → She___ beautiful<br>
+          <small style="color: #6b7280;">هي جميلة</small>
+        </div>
+        <input id="p4" type="text" placeholder="اكتب الاختصار" />
+        <button class="btn" onclick="checkPractice('p4','she\\'s')">✓ تحقق</button>
+        <button class="btn secondary" onclick="speak('She is beautiful. She\'s beautiful.')">🔊</button>
+        <div id="f4" class="feedback"></div>
+      </div>
+
+      <div class="practice-row">
+        <div style="background: #4f46e5; color: white; padding: 0.5rem; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">5</div>
+        <div style="flex:1; font-size: 1.1rem;">
+          <strong>They are friends</strong> → They___ friends<br>
+          <small style="color: #6b7280;">هم أصدقاء</small>
+        </div>
+        <input id="p5" type="text" placeholder="اكتب الاختصار" />
+        <button class="btn" onclick="checkPractice('p5','they\\'re')">✓ تحقق</button>
+        <button class="btn secondary" onclick="speak('They are friends. They\'re friends.')">🔊</button>
+        <div id="f5" class="feedback"></div>
+      </div>
+
+      <div style="margin-top: 2rem; text-align: center;">
+        <button class="btn secondary" onclick="clearPractice()">🔄 إعادة ضبط</button>
+        <button class="btn" onclick="checkAllPractice()" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">✅ تحقق من جميع الإجابات</button>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="card">
+      <h2 style="color: var(--accent); margin-bottom: 1.5rem;">🎯 اختبار الاختصارات</h2>
+      
+      <ol id="quiz" style="padding-left: 1.5rem;">
+        <!-- Quiz items will be generated by JS -->
+      </ol>
+
+      <div style="margin-top: 2rem; text-align: center;">
+        <button class="btn" onclick="scoreQuiz()" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); font-size: 1.1rem; padding: 1rem 2rem;">
+          🎯 احسب نتيجتي
+        </button>
+        <div id="score" style="font-weight: 700; margin-top: 1rem; font-size: 1.2rem;"></div>
+      </div>
+    </section>
+
+    <footer style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #1f2937 0%, #374151 100%); border-radius: 20px; color: white; text-align: center;">
+      <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">
+        © 2025 منصة تعلم الإنجليزية التفاعلية | جميع الحقوق محفوظة
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // Global state
+    let practiceCorrect = 0;
+
+    // PRACTICE CHECK
+    function checkPractice(id, correct){
+      const val = document.getElementById(id).value.trim().toLowerCase();
+      const fb = document.getElementById('f'+id.slice(1));
+      
+      if(!val){ 
+        fb.textContent = 'اكتب إجابتك أولاً'; 
+        fb.className='feedback wrong'; 
+        return;
+      }
+      
+      const isCorrect = val === correct || val === correct.replace(/'/g, "");
+      
+      if(isCorrect){
+        fb.textContent='🎉 ممتاز! إجابة صحيحة'; 
+        fb.className='feedback correct';
+        if(!fb.dataset.counted) {
+          practiceCorrect++;
+          fb.dataset.counted = 'true';
+        }
+      } else { 
+        fb.textContent=`❌ خطأ — الإجابة الصحيحة: ${correct}`; 
+        fb.className='feedback wrong';
+        fb.dataset.counted = 'false';
+      }
+    }
+
+    function checkAllPractice(){
+      const answers = ["he's", "we're", "you're", "she's", "they're"];
+      ['p1','p2','p3','p4','p5'].forEach((id, index) => {
+        checkPractice(id, answers[index]);
+      });
+    }
+    
+    function clearPractice(){ 
+      practiceCorrect = 0;
+      ['p1','p2','p3','p4','p5'].forEach(i=>{
+        document.getElementById(i).value=''; 
+        const el=document.getElementById('f'+i.slice(1)); 
+        if(el){
+          el.textContent='';
+          el.dataset.counted = 'false';
+        }
+      });
+    }
+
+    // SPEECH FUNCTIONALITY
+    function speak(text){
+      if(!text || !window.speechSynthesis) return;
+      
+      const synth = window.speechSynthesis;
+      synth.cancel();
+      
+      const ut = new SpeechSynthesisUtterance(text);
+      ut.rate = 1;
+      ut.pitch = 1;
+      ut.volume = 1;
+      
+      // Try to use English voice
+      const voices = synth.getVoices().filter(v => /en|english/i.test(v.lang));
+      if(voices.length > 0) ut.voice = voices[0];
+      
+      synth.speak(ut);
+    }
+
+    // QUIZ DATA
+    const quizData = [
+      {q:'Choose the correct contraction for "He is a teacher":', opts:['He\'s a teacher','His a teacher','Hes a teacher'], a:0},
+      {q:'Choose the correct contraction for "We are happy":', opts:['Were happy','We\'re happy','Wer happy'], a:1},
+      {q:'Choose the correct contraction for "You are students":', opts:['Your students','You\'re students','Youre students'], a:1},
+      {q:'Choose the correct contraction for "She is beautiful":', opts:['Shes beautiful','She\'s beautiful','Shis beautiful'], a:1},
+      {q:'Choose the correct contraction for "They are friends":', opts:['They\'re friends','Theyre friends','Their friends'], a:0},
+      {q:'What does "I\'m" stand for?', opts:['I am','I me','I my'], a:0},
+      {q:'What does "It\'s" stand for?', opts:['It his','It is','Its'], a:1},
+      {q:'Which is correct?', opts:['We\'re happy','Were happy','We re happy'], a:0}
+    ];
+
+    function buildQuiz(){
+      const qEl = document.getElementById('quiz'); 
+      qEl.innerHTML='';
+      
+      quizData.forEach((item,i)=>{
+        const li = document.createElement('li'); 
+        li.className='quiz-item';
+        
+        li.innerHTML = `
+          <div style="font-size:1.1rem;font-weight:600;margin-bottom:1rem;">${item.q}</div>
+        `;
+        
+        const form = document.createElement('div');
+        form.style.marginTop = '1rem';
+        
+        item.opts.forEach((opt,j)=>{
+          const label = document.createElement('label'); 
+          label.style.cssText = 'display:block;margin:0.75rem 0;padding:0.75rem;background:#f8fafc;border-radius:8px;cursor:pointer;transition:all 0.3s ease;border:2px solid transparent;';
+          label.innerHTML = `<input type='radio' name='q${i}' value='${j}' style='margin-right:0.5rem;'/> <span style='font-weight:500;'>${opt}</span>`;
+          
+          label.addEventListener('mouseenter', () => {
+            label.style.background = '#e2e8f0';
+            label.style.borderColor = '#cbd5e1';
+          });
+          label.addEventListener('mouseleave', () => {
+            if(!label.querySelector('input').checked) {
+              label.style.background = '#f8fafc';
+              label.style.borderColor = 'transparent';
+            }
+          });
+          
+          form.appendChild(label);
+        });
+        
+        li.appendChild(form);
+        qEl.appendChild(li);
+      });
+    }
+
+    function scoreQuiz(){
+      let correct = 0;
+      
+      quizData.forEach((item,i)=>{
+        const sel = document.querySelector('input[name=q'+i+']:checked');
+        const parent = document.querySelectorAll('.quiz-item')[i];
+        
+        parent.style.borderColor = '#e5e7eb';
+        parent.style.background = '#ffffff';
+        
+        if(sel) {
+          const isCorrect = parseInt(sel.value) === item.a;
+          
+          if(isCorrect){ 
+            correct++; 
+            parent.style.borderColor = '#10b981';
+            parent.style.background = 'linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%)';
+          } else { 
+            parent.style.borderColor = '#ef4444';
+            parent.style.background = 'linear-gradient(135deg, #fee2e2 0%, #fecaca 100%)';
+            
+            // Highlight correct answer
+            const correctLabel = parent.querySelectorAll('label')[item.a];
+            correctLabel.style.background = '#dcfce7';
+            correctLabel.style.borderColor = '#10b981';
+            correctLabel.style.fontWeight = 'bold';
+          }
+        }
+      });
+      
+      const score = Math.round((correct/quizData.length)*100);
+      
+      let scoreColor, scoreEmoji, scoreMessage;
+      if(score >= 90) {
+        scoreColor = '#10b981';
+        scoreEmoji = '🏆';
+        scoreMessage = 'ممتاز جداً!';
+      } else if(score >= 70) {
+        scoreColor = '#3b82f6';
+        scoreEmoji = '🎉';
+        scoreMessage = 'جيد جداً!';
+      } else if(score >= 50) {
+        scoreColor = '#f59e0b';
+        scoreEmoji = '👍';
+        scoreMessage = 'جيد، يمكنك التحسن!';
+      } else {
+        scoreColor = '#ef4444';
+        scoreEmoji = '📚';
+        scoreMessage = 'تحتاج لمزيد من المراجعة';
+      }
+      
+      document.getElementById('score').innerHTML = `
+        <div style="background:${scoreColor};color:white;padding:1.5rem;border-radius:15px;margin:1rem 0;">
+          <div style="font-size:2rem;margin-bottom:0.5rem;">${scoreEmoji}</div>
+          <div style="font-size:1.5rem;font-weight:700;">نتيجتك: ${correct}/${quizData.length} (${score}%)</div>
+          <div style="font-size:1rem;margin-top:0.5rem;">${scoreMessage}</div>
+        </div>
+      `;
+      
+      speak(`نتيجتك ${correct} من ${quizData.length}. Your score is ${score} percent.`);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function(){
+      buildQuiz();
+      
+      // Load voices
+      if(typeof speechSynthesis !== 'undefined') {
+        speechSynthesis.onvoiceschanged = function() {
+          // Voices loaded
+        };
+      }
+    });
+    
+    buildQuiz();
+  </script>
+</body>
+</html>

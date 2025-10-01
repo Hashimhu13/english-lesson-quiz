@@ -332,6 +332,13 @@
 </head>
 <body>
   <div class="container">
+    <!-- Navigation -->
+    <nav style="text-align: center; margin-bottom: 2rem;">
+      <a href="index.html" style="display: inline-block; background: #4f46e5; color: #fff; padding: 0.75rem 1.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; margin: 0 0.5rem; transition: all 0.3s ease;">🏠 الرئيسية</a>
+      <a href="subject_verb_lesson.html" style="display: inline-block; background: #10b981; color: #fff; padding: 0.75rem 1.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; margin: 0 0.5rem; transition: all 0.3s ease;">👤 الفاعل وفعل الكون</a>
+      <a href="contractions_lesson.html" style="display: inline-block; background: #f59e0b; color: #fff; padding: 0.75rem 1.5rem; border-radius: 12px; text-decoration: none; font-weight: 600; margin: 0 0.5rem; transition: all 0.3s ease;">✂️ الاختصارات</a>
+    </nav>
+
     <header>
       <h1>🎯 دليل شامل لأسئلة WH في الإنجليزية</h1>
       <p class="lead">تعلم استخدام What, When, In, On, How Old مع أمثلة تفاعلية ونطق صوتي</p>
@@ -625,7 +632,7 @@
           <div style="background: #f1f5f9; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
               <span style="font-weight: 600; color: #475569;">التقدم في الاختبار</span>
-              <span id="quiz-progress" style="font-weight: 600; color: #4f46e5;">0/10</span>
+              <span id="quiz-progress" style="font-weight: 600; color: #4f46e5;">0/13</span>
             </div>
             <div style="width: 100%; background: #e2e8f0; border-radius: 10px; height: 8px;">
               <div id="progress-bar" style="width: 0%; background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); height: 100%; border-radius: 10px; transition: width 0.3s ease;"></div>
@@ -959,7 +966,10 @@
       {q:'The party is on Friday. What is the day after Friday?', opts:['Saturday','Thursday','Sunday'], a:0, ar:'ما اليوم الذي يأتي بعد الجمعة؟'},
       {q:'Which number is "eightieth"?', opts:['88th','80th','18th'], a:1, ar:'أي رقم يعني "الثمانون"؟'},
       {q:'If something is "enormous" it means it is', opts:['very small','very big','very old'], a:1, ar:'كلمة "enormous" تعني'},
-      {q:'What question do we ask to know someone\'s age?', opts:['When','How old','What'], a:1, ar:'أي سؤال نسأله لمعرفة العمر؟'}
+      {q:'What question do we ask to know someone\'s age?', opts:['When','How old','What'], a:1, ar:'أي سؤال نسأله لمعرفة العمر؟'},
+      {q:'What is the day after Monday?', opts:['Tuesday','Wednesday','Sunday'], a:0, ar:'ما اليوم الذي يأتي بعد الاثنين؟'},
+      {q:'The first month of the year is...', opts:['February','January','March'], a:1, ar:'الشهر الأول من السنة هو...'},
+      {q:'The last month of the year is...', opts:['December','November','January'], a:0, ar:'الشهر الأخير من السنة هو...'}
     ];
 
     function buildQuiz(){
