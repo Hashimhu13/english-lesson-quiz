@@ -1,6 +1,29 @@
-# 🎯 WH Questions English Lesson Quiz
+# � Interactive English Learning Platform
 
-A comprehensive, interactive English lesson focused on WH questions (what, when, in, on, how old) with Arabic explanations, modern UI design, and advanced audio pronunciation features.
+A comprehensive, multi-lesson interactive platform for learning English grammar with Arabic explanations, modern UI design, and advanced audio pronunciation features.
+
+## 🚀 Live Demo
+
+**[🌐 Access the Complete Learning Platform](https://hashimhu13.github.io/english-lesson-quiz/)**
+
+Experience the full interactive English learning platform with multiple lessons and modern design!
+
+## 📚 Available Lessons
+
+### 1. 🎯 WH Questions (What, When, In, On, How Old)
+- **URL**: [WH Questions Lesson](https://hashimhu13.github.io/english-lesson-quiz/wh_lesson_quiz.html)
+- **Content**: Learn to use What, When, In, On, How Old with interactive examples
+- **Features**: 5 practice exercises, 13 quiz questions, audio pronunciation
+
+### 2. 👤 Subject, Verb Be & Possessive Adjectives  
+- **URL**: [Subject-Verb Lesson](https://hashimhu13.github.io/english-lesson-quiz/subject_verb_lesson.html)
+- **Content**: Master pronouns with verb "be" (am, is, are) and possessive adjectives
+- **Features**: Interactive tables, 5 practice exercises, 6 quiz questions
+
+### 3. ✂️ Contractions (he's, she's, we're, etc.)
+- **URL**: [Contractions Lesson](https://hashimhu13.github.io/english-lesson-quiz/contractions_lesson.html)  
+- **Content**: Learn English contractions with conversion practice
+- **Features**: Comprehensive tables, 5 practice exercises, 8 quiz questions
 
 ## ✨ Enhanced Features
 
