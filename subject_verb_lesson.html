@@ -182,35 +182,35 @@
       <h2>تدريبات تفاعلية</h2>
       <div class="practice-row">
         <div>1.</div>
-        <div style="flex:1">She ____ her bag is small.</div>
+        <div style="flex:1">Her bag ____ small.</div>
         <input id="p1" type="text" placeholder="is" />
         <button class="btn" onclick="checkPractice('p1','is')">تحقق</button>
         <div id="f1" class="feedback"></div>
       </div>
       <div class="practice-row">
         <div>2.</div>
-        <div style="flex:1">We ____ our car is heavy.</div>
+        <div style="flex:1">We ____ happy.</div>
         <input id="p2" type="text" placeholder="are" />
         <button class="btn" onclick="checkPractice('p2','are')">تحقق</button>
         <div id="f2" class="feedback"></div>
       </div>
       <div class="practice-row">
         <div>3.</div>
-        <div style="flex:1">I ____ my name is Ali.</div>
+        <div style="flex:1">I ____ a student.</div>
         <input id="p3" type="text" placeholder="am" />
         <button class="btn" onclick="checkPractice('p3','am')">تحقق</button>
         <div id="f3" class="feedback"></div>
       </div>
       <div class="practice-row">
         <div>4.</div>
-        <div style="flex:1">He ____ his car is big.</div>
+        <div style="flex:1">His car ____ big.</div>
         <input id="p4" type="text" placeholder="is" />
         <button class="btn" onclick="checkPractice('p4','is')">تحقق</button>
         <div id="f4" class="feedback"></div>
       </div>
       <div class="practice-row">
         <div>5.</div>
-        <div style="flex:1">They ____ their teacher is good.</div>
+        <div style="flex:1">They ____ students.</div>
         <input id="p5" type="text" placeholder="are" />
         <button class="btn" onclick="checkPractice('p5','are')">تحقق</button>
         <div id="f5" class="feedback"></div>
@@ -247,12 +247,16 @@
 
     // QUIZ DATA
     const quizData = [
-      {q:'He ____ his car is big.', opts:['is','are','am'], a:0},
-      {q:'We ____ our car is heavy.', opts:['is','are','am'], a:1},
-      {q:'I ____ my name is Ali.', opts:['is','are','am'], a:2},
-      {q:'She ____ her bag is small.', opts:['is','are','am'], a:0},
-      {q:'They ____ their teacher is good.', opts:['is','are','am'], a:1},
-      {q:'You ____ your school is new.', opts:['is','are','am'], a:1}
+      {q:'His car ____ big.', opts:['is','are','am'], a:0},
+      {q:'Our car ____ heavy.', opts:['is','are','am'], a:0},
+      {q:'My name ____ Ali.', opts:['is','are','am'], a:0},
+      {q:'Her bag ____ small.', opts:['is','are','am'], a:0},
+      {q:'Their teacher ____ good.', opts:['is','are','am'], a:0},
+      {q:'Your school ____ new.', opts:['is','are','am'], a:0},
+      {q:'We ____ happy.', opts:['is','are','am'], a:1},
+      {q:'They ____ students.', opts:['is','are','am'], a:1},
+      {q:'You ____ my friend.', opts:['is','are','am'], a:1},
+      {q:'I ____ a teacher.', opts:['is','are','am'], a:2}
     ];
     function buildQuiz(){
       const qEl = document.getElementById('quiz'); qEl.innerHTML='';
