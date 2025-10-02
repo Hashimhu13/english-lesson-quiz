@@ -386,8 +386,8 @@
               <p><strong>الاستخدام:</strong> للسؤال عن الأشياء والأسماء والمعلومات</p>
               <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
                 <strong>أمثلة:</strong><br>
-                • What is your name? →  ما اسمك؟ <br>
-                • What is that? → ماهذا؟<br>
+                • What is your name? → وش اسمك؟ <br>
+                • What is that? → وش هذا؟<br>
                 • What time is it? → كم الساعة؟
               </div>
             </div>
@@ -399,7 +399,7 @@
               <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
                 <strong>أمثلة:</strong><br>
                 • When is your birthday? → متى عيد ميلادك؟<br>
-                • When do you wake up? → متى تستيقظ؟<br>
+                • When do you wake up? → متى تصحى؟<br>
                 • When is the meeting? → متى الاجتماع؟
               </div>
             </div>
@@ -438,7 +438,7 @@
                 <strong>أمثلة:</strong><br>
                 • How old are you? → كم عمرك؟<br>
                 • I'm 20 years old → عمري 20 سنة<br>
-                • She's fifteen → هي 15 سنة
+                • She's fifteen → هي عمرها خمستعش
               </div>
             </div>
           </div>
@@ -466,7 +466,7 @@
                 <div>
                   <strong>📅 When is your vacation?</strong><br>
                   <em style="color: #4f46e5;">It's in July.</em><br>
-                  <small style="color: #6b7280;">إجازتك متى؟ - في شهر يوليو</small>
+                  <small style="color: #6b7280;">متى إجازتك؟ - في شهر يوليو</small>
                 </div>
                 <button class="small">🔊</button>
               </div>
@@ -487,7 +487,7 @@
                 <div>
                   <strong>🎂 How old are you?</strong><br>
                   <em style="color: #4f46e5;">I'm fifteen years old.</em><br>
-                  <small style="color: #6b7280;">عمرك كام؟ - عندي خمستاشر سنة</small>
+                  <small style="color: #6b7280;">كم عمرك؟ - عمري خمستعش سنة</small>
                 </div>
                 <button class="small">🔊</button>
               </div>
@@ -498,7 +498,7 @@
                 <div>
                   <strong>📋 What is the date today?</strong><br>
                   <em style="color: #4f46e5;">It's May 4th.</em><br>
-                  <small style="color: #6b7280;">النهاردة كام؟ - 4 مايو</small>
+                  <small style="color: #6b7280;">وش التاريخ اليوم؟ - 4 مايو</small>
                 </div>
                 <button class="small">🔊</button>
               </div>
@@ -533,7 +533,7 @@
               <div style="background: #4f46e5; color: white; padding: 0.5rem; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
               <div style="flex:1; font-size: 1.1rem;">
                 <strong>_____ is your vacation?</strong> It's in July.<br>
-                <small style="color: #6b7280;">إجازتك متى؟</small>
+                <small style="color: #6b7280;">متى إجازتك؟</small>
               </div>
               <input id="p1" type="text" placeholder="اكتب الإجابة" />
               <button class="small" onclick="checkPractice('p1','when')">✓ تحقق</button>
@@ -557,7 +557,7 @@
               <div style="background: #4f46e5; color: white; padding: 0.5rem; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</div>
               <div style="flex:1; font-size: 1.1rem;">
                 <strong>_____ _____ are you?</strong> I'm fifteen.<br>
-                <small style="color: #6b7280;">عمرك كام؟</small>
+                <small style="color: #6b7280;">كم عمرك؟</small>
               </div>
               <input id="p3" type="text" placeholder="كلمتين" />
               <button class="small" onclick="checkPractice('p3','how old')">✓ تحقق</button>
@@ -581,7 +581,7 @@
               <div style="background: #4f46e5; color: white; padding: 0.5rem; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">5</div>
               <div style="flex:1; font-size: 1.1rem;">
                 <strong>_____ is your name?</strong> My name is Ahmed.<br>
-                <small style="color: #6b7280;">اسمك إيه؟</small>
+                <small style="color: #6b7280;">وش اسمك؟</small>
               </div>
               <input id="p5" type="text" placeholder="اكتب الإجابة" />
               <button class="small" onclick="checkPractice('p5','what')">✓ تحقق</button>
@@ -959,17 +959,17 @@
     const quizData = [
       {q:'When is your vacation? It is _____ July.', opts:['in','on','at'], a:0, ar:'متى إجازتك؟ في يوليو'},
       {q:'The meeting is _____ Monday.', opts:['in','on','at'], a:1, ar:'الاجتماع يوم الاثنين'},
-      {q:'What is the date today? — It\'s May 4th. Which question word is used?', opts:['When','What','How old'], a:1, ar:'ما التاريخ اليوم؟'},
-      {q:'Which is correct: I am _____ years old.', opts:['twenty','twenty years old','years old'], a:0, ar:'أي من هذه صحيح؟'},
+      {q:'What is the date today? — It\'s May 4th. Which question word is used?', opts:['When','What','How old'], a:1, ar:'وش التاريخ اليوم؟'},
+      {q:'Which is correct: I am _____ years old.', opts:['twenty','twenty years old','years old'], a:0, ar:'وش الصحيح من هذي؟'},
       {q:'Our final test is _____ September.', opts:['in','on','at'], a:0, ar:'امتحاننا النهائي في سبتمبر'},
-      {q:'Which preposition is used with months?', opts:['on','in','by'], a:1, ar:'أي حرف جر نستخدم مع الشهور؟'},
-      {q:'The party is on Friday. What is the day after Friday?', opts:['Saturday','Thursday','Sunday'], a:0, ar:'ما اليوم الذي يأتي بعد الجمعة؟'},
-      {q:'Which number is "eightieth"?', opts:['88th','80th','18th'], a:1, ar:'أي رقم يعني "الثمانون"؟'},
-      {q:'If something is "enormous" it means it is', opts:['very small','very big','very old'], a:1, ar:'كلمة "enormous" تعني'},
-      {q:'What question do we ask to know someone\'s age?', opts:['When','How old','What'], a:1, ar:'أي سؤال نسأله لمعرفة العمر؟'},
-      {q:'What is the day after Monday?', opts:['Tuesday','Wednesday','Sunday'], a:0, ar:'ما اليوم الذي يأتي بعد الاثنين؟'},
-      {q:'The first month of the year is...', opts:['February','January','March'], a:1, ar:'الشهر الأول من السنة هو...'},
-      {q:'The last month of the year is...', opts:['December','November','January'], a:0, ar:'الشهر الأخير من السنة هو...'}
+      {q:'Which preposition is used with months?', opts:['on','in','by'], a:1, ar:'وش حرف الجر اللي نستخدمه مع الشهور؟'},
+      {q:'The party is on Friday. What is the day after Friday?', opts:['Saturday','Thursday','Sunday'], a:0, ar:'وش اليوم اللي بعد الجمعة؟'},
+      {q:'Which number is "eightieth"?', opts:['88th','80th','18th'], a:1, ar:'وش الرقم اللي يعني "الثمانون"؟'},
+      {q:'If something is "enormous" it means it is', opts:['very small','very big','very old'], a:1, ar:'كلمة "enormous" معناها'},
+      {q:'What question do we ask to know someone\'s age?', opts:['When','How old','What'], a:1, ar:'وش السؤال اللي نسأله عشان نعرف العمر؟'},
+      {q:'What is the day after Monday?', opts:['Tuesday','Wednesday','Sunday'], a:0, ar:'وش اليوم اللي بعد الاثنين؟'},
+      {q:'The first month of the year is...', opts:['February','January','March'], a:1, ar:'أول شهر في السنة هو...'},
+      {q:'The last month of the year is...', opts:['December','November','January'], a:0, ar:'آخر شهر في السنة هو...'}
     ];
 
     function buildQuiz(){
